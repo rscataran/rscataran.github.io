@@ -10351,8 +10351,8 @@ Save Me!
 <div created="20210201073243516" modified="20210201073243516" title="$:/state/add-plugin-info/$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.23/index.html/$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.23/index.html/$:/plugins/tiddlywiki/codemirror-mode-htmlembedded">
 <pre>yes</pre>
 </div>
-<div created="20210106075127964" modified="20210201073029681" title="$:/state/showeditpreview">
-<pre>no</pre>
+<div created="20210106075127964" modified="20210216223558966" title="$:/state/showeditpreview">
+<pre>yes</pre>
 </div>
 <div created="20210105061031202" modified="20210216124319412" title="$:/state/sidebar">
 <pre>yes</pre>
@@ -10650,10 +10650,18 @@ namespace Filters
 
 &lt;/$list&gt;</pre>
 </div>
-<div created="20210216223549498" modified="20210216223555311" title="UserExtension">
-<pre>'''
-test
-'''</pre>
+<div created="20210216223549498" modified="20210216223702856" title="UserExtension">
+<pre>```
+    public static class UserExtension
+    {
+        public static string GetClaimValue(this IPrincipal User, string ClaimType)
+        {
+            ClaimsIdentity ci = (ClaimsIdentity)User.Identity;
+            var Value = ci.FindFirst(ClaimType).Value ?? &quot;&quot;;
+            return Value;
+        }
+    }
+```</pre>
 </div>
 
 
